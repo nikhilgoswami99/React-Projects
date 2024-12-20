@@ -1,0 +1,47 @@
+.main_content_section {
+    height: 120vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+}
+
+.main_content_section img {
+    position: relative;
+    left: 5%;
+    height: 75%;
+    width: 50%;
+}
+
+.main_content_text {
+    background-color: rgb(243, 244, 246);
+    max-width: 50%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+
+.main_content_text h2{
+    width: 60%;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+}
+
+.main_content_text p {
+    width: 60%;
+    line-height: 1.5rem;
+    color: rgb(106, 118, 124);
+}
+
+#main_section_btn {
+    background-color: rgb(80, 70, 229);
+    border: none;
+    padding: 15px 30px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}

@@ -1,0 +1,56 @@
+.reviews_container {
+    height: 115vh;
+    background-color: white;
+    padding-block: 5%;
+    padding-inline: 2%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3%;
+}
+
+.review_cards {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 10px;
+}
+
+span p {
+    background-color: none;
+    margin: 2px;
+    font-size: small;
+    margin-bottom: 5px;
+}
+
+.profession {
+    color: black;
+}
+
+.user_name {
+    color: black;
+    font-weight: bold;
+}
+
+
+#para {
+    width: 100%;
+    background-color: rgb(249, 250, 252);
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px rgba(128, 128, 128, 0.5);
+    line-height: 25px;
+    padding: 15px;
+    color: rgb(79, 68, 65);
+}
+
+.user_info img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+}
+
+.user_info {
+    display: flex;
+    gap: 10px;
+}
+
