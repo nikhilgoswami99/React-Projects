@@ -1,0 +1,32 @@
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 5px solid;
+    width: 50%;
+}
+
+.item_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.item_img {
+    height: 5rem;
+}
+
+
+
+.item_btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
