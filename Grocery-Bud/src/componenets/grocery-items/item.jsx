@@ -4,8 +4,8 @@ function Item(props)
 {
     return <>
     <div className='item-div'>
-        <p>{props.item}</p>
-        <button onClick={props.deleteItems}>Delete</button>
+        <p className='item-name'>{props.item}</p>
+        <button className='del-btn' onClick={props.deleteItems}>Delete</button>
     </div>
     </>
 }

@@ -6,3 +6,16 @@
     margin-top: 5px;
 }
 
+.item-name {
+    font-size: 22px;
+
+}
+
+.del-btn {
+    background-color: rgb(248, 66, 66);
+    color: white;
+    font-size: large;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+}

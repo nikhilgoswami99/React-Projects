@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import Item from "./componenets/grocery-items/item";
+import { ToastContainer, toast } from "react-toastify";
 
 function App() {
   const [data, setData] = useState([]);
@@ -13,32 +14,45 @@ function App() {
 
   function addItem() {
     if (newData) {
-      let newArr = [...data, newData];
+      let newArr = [...data, newData.trim()];
       setData(newArr);
       setNewData("");
 
       localStorage.setItem("items", JSON.stringify(newArr));
+      notifySuccess();
     } else {
-      alert("Input field is empty");
+      notifyInfo();
     }
   }
 
   // logic for taking input
   function inputText(e) {
-    setNewData(e.target.value.trim());
+    setNewData(e.target.value);
   }
 
   //logic for deleting items
-  function deleteItems(e, idx) {
+  function deleteItems(idx) {
     let arr = data.filter((item, index) => {
-      if (index === idx) {
-        return data.splice(idx, 1);
-        localStorage.setItem("items", JSON.stringify(arr));
-        setData(arr);
+      if (index !== idx) {
+        return item;
       }
     });
-    console.log(arr);
+    localStorage.setItem("items", JSON.stringify(arr));
+    notifyError();
+    setData(arr);
   }
+
+  const handleKeyPress = (e) => {
+    console.log(e.key);
+
+    if (e.key === "Enter") {
+      addItem();
+    }
+  };
+
+  const notifySuccess = () => toast.success("Success! Task completed.");
+  const notifyError = () => toast.error("Item deleted successfully");
+  const notifyInfo = () => toast.info("Please provide a value");
 
   return (
     <>
@@ -46,6 +60,7 @@ function App() {
         <h2>My Grocery List</h2>
         <div className="input-btn-box">
           <input
+            onKeyDown={handleKeyPress}
             value={newData}
             onChange={inputText}
             type="text"
@@ -58,8 +73,8 @@ function App() {
         {data.map((item, idx) => {
           return (
             <Item
-              deleteItems={(e) => {
-                deleteItems(e, idx);
+              deleteItems={() => {
+                deleteItems(idx);
               }}
               key={idx}
               item={item}
@@ -67,6 +82,17 @@ function App() {
           );
         })}
       </div>
+      <ToastContainer
+        position="top-center"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        pauseOnHover
+        theme="colored"
+      ></ToastContainer>
     </>
   );
 }
