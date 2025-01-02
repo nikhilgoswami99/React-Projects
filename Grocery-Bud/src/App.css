@@ -1,14 +1,24 @@
 .container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     background-color: white;
-    height: 10rem;
-    width: 25rem;
     box-shadow: 1px 1px 5px gray;
     border-radius: 5px;
     cursor: pointer;
     gap: 2px;
+    min-width: 400px;
+    min-height: 100px;
+    padding: 1rem;
+}
+
+.input-btn-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
 }
 
 .container:hover {
@@ -17,12 +27,12 @@
     transition-duration: 0.5s;
 }
 
-.grocery-items {
+#grocery-items {
     font-size: large;
     padding: 0.3rem;
     width: 70%;
     border-radius: 3px;
-    border: 1px solid lightgray;
+    border: 2px solid lightgray;
   }
   
   .add-btn {

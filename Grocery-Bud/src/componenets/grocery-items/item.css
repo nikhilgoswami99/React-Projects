@@ -1,0 +1,8 @@
+.item-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 5px;
+}
+
