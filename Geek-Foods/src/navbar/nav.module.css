@@ -1,0 +1,55 @@
+
+
+.logo_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3%;
+    gap: 10px;
+    padding: 15px;
+}
+
+.logo_container p {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.navbar {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3%;
+    border-bottom: 1px solid lightgray;
+}
+
+.nav_sections {
+    display: flex;
+    gap: 30px;
+}
+
+#blue {
+    color: blue;
+}
+
+.nav_sections a {
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+
+.navbar_btn {
+    background-color: rgb(30, 78, 202);
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 50px;
+}

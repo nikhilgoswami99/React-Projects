@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.filter-form {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 5rem;
+    padding-block: 2rem;
+}
+
+.search {
+    font-size: larger;
+    padding: 5px;
+}
+
+.rating {
+    font-size: larger;
+    padding: 5px;
+    width: 10rem;
+    margin-left: 0.5rem;
+}
+
+.text {
+    font-size: larger;
+}
